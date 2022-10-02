@@ -225,6 +225,42 @@ int main()
 }*/
 
 
+/*cjc03304
+#include<stdio.h>
+int main()
+{
+	int n1, n2, n3, n4, min = 0;
+	scanf_s("%d %d %d %d", &n1, &n2, &n3, &n4);
+	//擂台法（此为正解）
+	min = n1;
+	if (min > n2)
+		min = n2;
+	if (min > n3)
+		min = n3;
+	if (min > n4)
+		min = n4;
+	printf("%d", min);
+	if (n1 < n2 && n1 < n3 && n1 < n4)//能跑，但为错解
+		printf("%d", n1);
+	if (n2 < n1 && n2 < n3 && n2 < n4)
+		printf("%d", n2);
+	if (n3 < n1 && n3 < n2 && n3 < n4)
+		printf("%d", n3);
+	if (n4 < n1 && n4 < n2 && n4 < n3)
+		printf("%d", n4);
+	//以下为最大值求法
+	if (n1 > n2 && n1 > n3 && n1 > n4)
+		printf("%d", n1);
+	if (n2 > n1 && n2 > n3 && n2 > n4)
+		printf("%d", n2);
+	if (n3 > n1 && n3 > n2 && n3 > n4)
+		printf("%d", n3);
+	if (n4 > n1 && n4 > n2 && n4 > n3)
+		printf("%d", n4);
+	return 0;
+}*/
+
+
 //cjc03305
 /*#include<stdio.h>
 int main()
@@ -236,4 +272,64 @@ int main()
 	else
 		printf("no");
 	return 0;
+}*/
+
+
+//cjc03306
+/*#include<stdio.h>
+int main()
+{
+	char a;
+	scanf_s("%c", &a);
+	if (a >= 'A' && a <= 'Z' || a >= 'a' && a <= 'z')
+		printf("yes");
+	else
+		printf("%c", a);
+	return 0;
+}*/
+
+
+//cjc04101
+//void fun() {
+//	int a;
+//	printf("Input an integer:");
+//	/**************found**************/
+//	scanf_s("%d", &a);
+//	/**************found**************/
+//	if (a == 1)//此处原为if(a=1)需添加一个=
+//		printf("One\n");
+//	/**************found**************/
+//	else if (a > 2)//此处原为else if (a <> 2)需删除一个<
+//		printf("Many\n");
+//	else printf("Two\n");
+//}
+
+
+//cjc04302-鸡兔问题：假设鸡兔共有x只，脚数共有y只，利用循环编写一个程序求出鸡和兔各有多少只。
+/*#include<stdio.h>
+int main()
+{
+	int a, b, x, y;//a为鸡，b为兔
+	scanf_s("%d %d", &x, &y);
+	for (a = 0; a <= x; a++)
+	{
+		b = x - a;//x为总数，a为鸡数
+		{
+			if (2 * a + 4 * b == y)
+			printf("鸡有%d 兔有%d", a, b);
+		}
+	}
+	return 0;
+}*/
+/*#include<stdio.h>
+int main()
+{
+	int x = 0, y = 0;
+	for (x = 0; x <= 30; x++)
+	{
+		y = 30 - x;
+		{if (2 * x + 4 * y == 90)
+			printf("鸡有%d只，兔子有%d只", x, y);
+		}
+	}return 0;
 }*/
