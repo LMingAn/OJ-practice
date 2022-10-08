@@ -52,8 +52,18 @@ int main()
 //}
 
 
-//cjc02304:-----暂时无法解决
-
+//cjc02304:
+/*#include<stdio.h>//正解法
+int main()
+{
+	int a1, a2, b1, b2, s1, s2;
+	scanf("%d %d\n%d %d", &a1, &a2, &b1, &b2);
+	printf("%d %d\n", s1 = (a1 + b1), s2 = (a2 + b2));
+	printf("%d %d\n", s1 = (a1 - b1), s2 = (a2 - b2));
+	printf("%d %d\n", s1 = (a1 * b1 - a2 * b2), s2 = (a1 * b2 + a2 * b1));
+	printf("%d %d\n", s1 = (a1 * a2 + b1 * b2) / (b1 * b1 + b2 * b2), s2 = (a2 * b1 - a1 * b2) / (b1 * b1 + b2 * b2));
+	return 0;
+}*/
 //int main()
 //{
 //	int a1, a2, b1, b2, s1, s2;//a为实部，b为虚部
