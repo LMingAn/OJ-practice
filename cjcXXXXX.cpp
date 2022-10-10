@@ -315,6 +315,57 @@ int main()
 //}
 
 
+//cjc04301
+/*#include<stdio.h>
+int main()
+{
+	int a, b, c;
+	scanf_s("%d", &a);
+	for (b = 1; b <= a; b++)
+	{
+		{
+			for (c = 1; c <= b; c++)
+				printf("*");
+		}
+		printf("\n");
+	}
+	return 0;
+}*/
+
+
+//cjc04308
+/*#include<stdio.h>
+int main()
+{
+	int a, b, c;
+	scanf_s("%d", &a);//最大行数
+	for (b = 0; b <= a; b++)//行数 - 递增 - 从0开始
+	{
+			for (c = 1; c <= b; c++)//空格数 - 递增 - 从1开始
+				printf(" ");
+			for (c = 1; c <= a - b; c++)//*数 - 递减 - 从'1'开始
+				printf("*");
+			printf("\n");
+	}
+	return 0;
+}*/
+#include<stdio.h>
+int main()
+{
+	int a, b, c;
+	scanf_s("%d", &a);//最大行数
+	for (b = 0; b <= a; b++)//行数 - 递增 - 从0开始
+	{
+		for (c = 1; c <= b; c++)//空格数 - 递增 - 从1开始
+			printf(" ");
+		for (c = 1; c <= a - b; c++)//*数 - 递减 - 从'1'开始
+			printf("*");
+		printf("\n");
+	}
+	return 0;
+}
+
+
 //cjc04302-鸡兔问题：假设鸡兔共有x只，脚数共有y只，利用循环编写一个程序求出鸡和兔各有多少只。
 /*#include<stdio.h>
 int main()
