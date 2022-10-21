@@ -111,35 +111,37 @@ int main()
 
 
 //1053
-#include<stdio.h>
-int main()
-{
-    int arr[200] = { 0 };
-    int n;
-    scanf_s("%d\n", &n);
-    for (int i = 0; i < n; i++)
-    {
-        scanf_s("%d", &arr[i]);
-    }
-    for (int j = 0; j < n - 1; j++)
-    {
-        int m = 0;
-        for (m = 0; m < n - j - 1; m++)
-        {
-            if (arr[m] > arr[m + 1])
-            {
-                int temp = arr[m];
-                arr[m] = arr[m + 1];
-                arr[m + 1] = temp;
-            }
-        }
-    }
-    for (int h = 0; h < n; h++)
-    {
-        printf("%d ", arr[h]);
-    }
-    return 0;
-}
+//#include<stdio.h>
+//int main()
+//{
+//    int arr[200] = { 0 };
+//    int n;
+//    scanf_s("%d\n", &n);
+//    for (int i = 0; i < n; i++)
+//    {
+//        scanf_s("%d", &arr[i]);
+//    }
+//    for (int j = 0; j < n - 1; j++)
+//    {
+//        int m = 0;
+//        for (m = 0; m < n - j - 1; m++)
+//        {
+//            if (arr[m] > arr[m + 1])
+//            {
+//                int temp = arr[m];
+//                arr[m] = arr[m + 1];
+//                arr[m + 1] = temp;
+//            }
+//        }
+//    }
+//    for (int h = 0; h < n; h++)
+//    {
+//        printf("%d ", arr[h]);
+//    }
+//    return 0;
+//}
+ 
+
 //1102
 /*#include<stdio.h>
 int main()
@@ -150,6 +152,39 @@ int main()
     printf("%lld", C);
     return 0;
 }*/
+
+//1110
+//#include<stdio.h>
+//int main()
+//{
+//    int x, n, z, e;
+//    scanf("%d %d", &x, &n);
+//    int arr[100];
+//    for (z = 0; z < x; z++)
+//    {
+//        scanf("%d", &arr[z]);
+//    }
+//    for (z = 0; z < x; z++)
+//    {
+//        for (int q = z + 1; q < x; q++)
+//        {
+//            if (arr[z] > arr[q])
+//            {
+//                e = arr[z];
+//                arr[z] = arr[q];
+//                arr[q] = e;
+//            }
+//        }
+//        if (arr[z] % n != 0)
+//        {
+//            if (arr[z] >= 65 && arr[z] <= 90)
+//                printf("%c ", arr[z]);
+//            else
+//                printf("%d ", arr[z]);
+//        }
+//    }
+//    return 0;
+//}
 
 
 //1146
