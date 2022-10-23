@@ -110,6 +110,57 @@ int main()
 }*/
 
 
+//1048
+//#include<stdio.h>
+//int main()
+//{
+//    int i, m, k;
+//    for (i = 100; i <= 1000; i++)
+//    {
+//        k = i;
+//        m = 0;
+//        while (k > 0)
+//        {
+//            m = m * 10 + k % 10;
+//            k = k / 10;
+//        }
+//        if (m == i)
+//            printf("%d\n", i);
+//    }
+//    return 0;
+//}
+
+//1049
+#include<stdio.h>
+int main()
+{
+    int a, b, c, d, e;
+    scanf_s("%d", &e);
+    for (a = 10000; a <= 1000000; a++)
+    {
+        c = a;
+        b = 0;
+        while (c > 0)
+        {
+            b = b * 10 + c % 10;
+            c = c / 10;
+        }
+        if (b == a)
+        {
+            d = 0;
+            while (b > 0)
+            {
+                d = d + b % 10;
+                b = b / 10;
+            }
+            if (d == e)
+                printf("%d\n", a);
+        }
+    }
+    return 0;
+}
+
+
 //1053
 //#include<stdio.h>
 //int main()
