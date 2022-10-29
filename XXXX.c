@@ -37,6 +37,23 @@ int main()
     return 0;
 }*/
 
+//1005
+//#include<stdio.h>
+//int main()
+//{
+//    int n, a, b = 1, c = 1, d = 1;
+//    scanf("%d", &n);
+//    if (n > 2)
+//        for (a = 3; a <= n; a++)
+//        {
+//            d = (b + c) % 10007;
+//            b = c;
+//            c = d;
+//        }
+//    printf("%d", c);
+//    return 0;
+//}
+
 
 //1006
 /*#include<stdio.h>
@@ -110,6 +127,23 @@ int main()
 }*/
 
 
+//1047
+#include<stdio.h>
+int main()
+{
+    int a, b, c, d;
+    for (a = 100; a < 1000; a++)
+    {
+        b = a / 100;//求百位数
+        c = (a / 10) % 10;//求十位数
+        d = a % 10;//求个位数
+        if (a == b * b * b + c * c * c + d * d * d)
+            printf("%d ", a);
+    }
+    return 0;
+}
+
+
 //1048
 //#include<stdio.h>
 //int main()
@@ -130,35 +164,35 @@ int main()
 //    return 0;
 //}
 
-//1049
-#include<stdio.h>
-int main()
-{
-    int a, b, c, d, e;
-    scanf_s("%d", &e);
-    for (a = 10000; a <= 1000000; a++)
-    {
-        c = a;
-        b = 0;
-        while (c > 0)
-        {
-            b = b * 10 + c % 10;
-            c = c / 10;
-        }
-        if (b == a)
-        {
-            d = 0;
-            while (b > 0)
-            {
-                d = d + b % 10;
-                b = b / 10;
-            }
-            if (d == e)
-                printf("%d\n", a);
-        }
-    }
-    return 0;
-}
+////1049
+//#include<stdio.h>
+//int main()
+//{
+//    int a, b, c, d, e;
+//    scanf_s("%d", &e);
+//    for (a = 10000; a <= 1000000; a++)
+//    {
+//        c = a;
+//        b = 0;
+//        while (c > 0)
+//        {
+//            b = b * 10 + c % 10;
+//            c = c / 10;
+//        }
+//        if (b == a)
+//        {
+//            d = 0;
+//            while (b > 0)
+//            {
+//                d = d + b % 10;
+//                b = b / 10;
+//            }
+//            if (d == e)
+//                printf("%d\n", a);
+//        }
+//    }
+//    return 0;
+//}
 
 
 //1053
