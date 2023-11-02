@@ -28,28 +28,28 @@ CSC集训队算法组的同学有很多，每个同学都有一个固定的学�
 说明/提示
 最近的两个同学学号为：12200050999 12200050909 二者之间存在89个数
 */
-int main()
-{
-	long long N = 0, temp = 0;
-	cin >> N;
-	vector<long long> num;
-	for (long n = 0; n < N; ++n)
-	{
-		cin >> temp;
-		num.push_back(temp);
-	}
-	long long min = num[0];
-	for (long n = 0; n < N; ++n)
-	{
-		for (long m = n + 1; m < N; ++m)
-		{
-			if (min > abs(num[n] - num[m]))
-				min = abs(num[n] - num[m]);
-		}
-	}
-	cout << min - 1;
-	return 0;
-}
+//int main()
+//{
+//	long long N = 0, temp = 0;
+//	cin >> N;
+//	vector<long long> num;
+//	for (long n = 0; n < N; ++n)
+//	{
+//		cin >> temp;
+//		num.push_back(temp);
+//	}
+//	long long min = num[0];
+//	for (long n = 0; n < N; ++n)
+//	{
+//		for (long m = n + 1; m < N; ++m)
+//		{
+//			if (min > abs(num[n] - num[m]))
+//				min = abs(num[n] - num[m]);
+//		}
+//	}
+//	cout << min - 1;
+//	return 0;
+//}
 
 
 
