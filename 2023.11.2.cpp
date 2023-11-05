@@ -1,7 +1,7 @@
-#include <iostream>
-#include <string>
-#include <algorithm>
-using namespace std;
+//#include <iostream>
+//#include <string>
+//#include <algorithm>
+//using namespace std;
 
 /*
 第三题
@@ -42,17 +42,17 @@ cin >> s;
 
 这样可以保证读入空格。
 */
+/*
 int main()
 {
 	string s1, s2;
 	long n = 0, m = 0, nm = 0;//n为首次遍历，m为出现次数，nm为动态首次出现地点
-	cin >> s1;
+	getline(cin, s1);
 	transform(s1.begin(), s1.end(), s1.begin(), ::tolower);//大小写转化 -- 转化为小写
-	getchar();
-	s1 += " ";
+	s1 = " " + s1 + " ";
 	getline(cin, s2);
 	transform(s2.begin(), s2.end(), s2.begin(), ::tolower);
-	s2 += " ";
+	s2 = " " + s2 + " ";
 	nm = n = s2.find(s1);//首次遍历查询
 	while (s2.size() != 0 && n != -1)//重复遍历查询
 	{
@@ -62,7 +62,7 @@ int main()
 		else
 		{
 			++m;
-			s2.erase(0, nm + s1.size());
+			s2.erase(0, nm + s1.size() - 1);
 		}
 	}
 	if (n == -1)
@@ -71,8 +71,26 @@ int main()
 		cout << m << " " << n;
 	return 0;
 }
+*/
 
+/*
+第二题
+题目描述
+听说CSC算法组的余同学准备请大家喝奶茶，但是他发现在账单中，除了某个口味奶茶只点了一杯，其余都点了偶数杯，他十分好奇谁的口味与众不同，他准备找出这个小机灵鬼点的奶茶。
 
+输入格式
+第一行N表示奶茶的杯数（N为奇数且N<1e7） 第二行输入N杯奶茶的id
+
+输出格式
+独一无二的那杯奶茶id
+
+输入输出样例
+输入 #1复制
+5
+1 2 2 1 3
+输出 #1复制
+3
+*/
 //int main()
 //{
 //	unordered_map<int, int> id;
@@ -96,7 +114,24 @@ int main()
 //}
 
 
+/*
+第一题
+题目描述
+CSC算法组有好几个同学经常在积分赛中夺得第一，好奇的张老师和林老师突然有天想要知道哪个同学拿第一的次数最多，并准备给他一份大大的surprise。
 
+输入格式
+第一行输入整数N（N <1e7），表示共有N次积分赛。 第二行依次输入N次积分赛第一名的名字。
+
+输出格式
+输出获得第一名次数最多的同学的名字和其获得第一名的次数，结果保证无并列情况发生。
+
+输入输出样例
+输入 #1复制
+5
+xiaoming lilei lihua xiaoming xiaoming
+输出 #1复制
+xiaoming 3
+*/
 //int main()
 //{
 //	unordered_map<string, int> s1;
